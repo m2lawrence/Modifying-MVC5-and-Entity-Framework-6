@@ -1,0 +1,99 @@
+﻿@model _321191mvc.Models.Customer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<!-- ------------------------------- transparent jumbotron - used for the title. ---------------------------------------------- -->
+<center>
+    <div style="background:transparent !important" class="jumbotron">
+        <h2><u>Delete Customer</u></h2>
+    </div>
+</center>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+ 
+    <!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+        <div class="container">
+            <!-- open container -->
+            <div class="row">
+                <!-- open row -->
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        <u>@Html.DisplayNameFor(model => model.Cust_ID)</u>
+                        <br />
+                        @Html.DisplayFor(model => model.Cust_ID)
+                    </div><!-- close form -->
+                </div><!-- close column -->
+            </div><!-- close row -->
+        </div><!-- close container -->
+
+        <!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+        <div class="container">
+            <!-- open container -->
+            <div class="row">
+                <!-- open row -->
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        <u>@Html.DisplayNameFor(model => model.Name)</u>
+                        <br />
+                        @Html.DisplayFor(model => model.Name)
+                    </div><!-- close form -->
+                </div><!-- close column -->
+
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        <u>@Html.DisplayNameFor(model => model.Date)</u>
+                        <br />
+                        @Html.DisplayFor(model => model.Date)
+                    </div><!-- close form -->
+                </div><!-- close column -->
+
+
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        <u>@Html.DisplayNameFor(model => model.Email)</u>
+                        <br />
+                        @Html.DisplayFor(model => model.Email)
+                    </div><!-- close form -->
+                </div><!-- close column -->
+
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        <u>@Html.DisplayNameFor(model => model.Mobile)</u>
+                        <br />
+                        @Html.DisplayFor(model => model.Mobile)
+                    </div><!-- close form -->
+                </div><!-- close column -->
+            </div><!-- close row -->
+        </div><!-- close container -->
+
+    <!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+        <div class="container"><!-- open container -->
+            <div class="row"><!-- open row -->
+                <div class="col-md-3 "><!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-actions no-color"><!-- open form -->
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                    </div><!-- close form -->
+                </div><!-- close column -->
+            </div><!-- close row -->
+        </div><!-- close container -->
+
+</div><!-- close form horizontal -->
+}

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<_321191mvc.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutCustomers.cshtml";
+}
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Customers", "Index", "Customers", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">@Html.ActionLink("Home", "Index", "Customers")</li><!-- active means lite up, & used for page location. -->
+                <li>@Html.ActionLink("Create", "Create", "Customers")</li>
+                <li>@Html.ActionLink("Orders", "Index", "Orders")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------- transparent jumbotron - used for the title. ---------------------------------------------- -->
+<center>
+    <div style="background:transparent !important" class="jumbotron">
+        <h2><u>Customers Details</u></h2>
+    </div>
+</center>
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- loop through model and display database in BootStrap columns. -->
+@foreach (var item in Model)
+{
+    <!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+    <div class="container">
+        <!-- open container -->
+        <div class="row">
+            <!-- open row -->
+            <div class="col-md-3 ">
+                <!-- Open column, middle sized, and x3 of them. -->
+                <div class="form-group">
+                    <u>@Html.DisplayNameFor(model => model.Name)</u>
+                    <br/>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </div><!-- close form -->
+            </div><!-- close column -->
+
+            <div class="col-md-3 ">
+                <!-- Open column, middle sized, and x3 of them. -->
+                <div class="form-group">
+                    <u>@Html.DisplayNameFor(model => model.Date)</u>
+                    <br/>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </div><!-- close form -->
+            </div><!-- close column -->
+
+            <div class="col-md-3 ">
+                <!-- Open column, middle sized, and x3 of them. -->
+                <div class="form-group">
+                    <u>@Html.DisplayNameFor(model => model.Email)</u>
+                    <br />
+                    @Html.DisplayFor(modelItem => item.Email)
+                </div><!-- close form -->
+            </div><!-- close column -->
+
+            <div class="col-md-3 ">
+                <!-- Open column, middle sized, and x3 of them. -->
+                <div class="form-group">
+                    <u>@Html.DisplayNameFor(model => model.Mobile)</u>
+                    <br />
+                    @Html.DisplayFor(modelItem => item.Mobile)
+                </div><!-- close form -->
+            </div><!-- close column -->
+
+            <div class="col-md-3 ">
+                <!-- Open column, middle sized, and x3 of them. -->
+                <div class="form-group">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Cust_ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Cust_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Cust_ID })
+                    <br/><!-- line break -->
+                    <hr /><!-- white bar -->
+                </div><!-- close form -->
+            </div><!-- close column -->
+        </div><!-- close row -->
+    </div><!-- close container -->
+
+}

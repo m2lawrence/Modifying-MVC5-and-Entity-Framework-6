@@ -1,0 +1,106 @@
+﻿@model _321191mvc.Models.Customer
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<!-- ------------------------------- transparent jumbotron - used for the title. ---------------------------------------------- -->
+<center>
+    <div style="background:transparent !important" class="jumbotron">
+        <h2><u>Edit Customer</u></h2>
+    </div>
+</center>
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+        <div class="container"><!-- open container -->
+            <div class="row"><!-- open row -->
+                <div class="col-md-3 "><!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group"><!-- open form -->
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        @Html.LabelFor(model => model.Cust_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <br />
+                        @Html.EditorFor(model => model.Cust_ID, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Cust_ID, "", new { @class = "text-danger" })
+                    
+                    </div><!-- close form -->
+                </div><!-- close column -->
+            </div><!-- close row -->
+        </div><!-- close container -->
+        <!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+        <div class="container">
+            <!-- open container -->
+            <div class="row">
+                <!-- open row -->
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <br />
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div><!-- close form -->
+                </div><!-- close column -->
+
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <br />
+                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                    </div><!-- close form -->
+                </div><!-- close column -->
+
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <br />
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div><!-- close form -->
+                </div><!-- close column -->
+
+                <div class="col-md-3 ">
+                    <!-- Open column, middle sized, and x3 of them. -->
+                    <div class="form-group">
+                        <!-- open form -->
+                        @Html.LabelFor(model => model.Mobile, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <br />
+                        @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+                    </div><!-- close form -->
+                </div><!-- close column -->
+            </div><!-- close row -->
+        </div><!-- close container -->
+
+        <div class="container">
+            <!-- open container -->
+            <div class="row">
+                <!-- open row -->
+                <div class="col-md-3">
+                    <!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div><!-- close form -->
+                </div><!-- close column -->
+            </div><!-- close row -->
+        </div><!-- close container -->
+
+    </div><!-- close form horizontal -->
+}
+
+@section Scripts {
+@Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,213 @@
+﻿<!-- Michael Lawrence BSc (HONS) -->
+
+@{
+    ViewBag.Title = "Landing";
+    Layout = "~/Views/Shared/LayoutCustomers.cshtml";    
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <!-- Custom CSS -->
+    <link href="~/Content/Landing.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- open form -->
+        <div>
+            <!-- open page div -->
+            <!-- navbar-fixed-top and "inverse" means black, as default is grey here.-->
+            <nav class="navbar navbar-inverse navbar-fixed-top topnav">
+                <!-- open navbar-inverse -->
+
+
+                <div class="container topnav">
+                    <!-- open container topnav -->
+                    <!-- Burger Bun Logo -->
+                    <div class="navbar-header">
+                        <!-- open navbar-header -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">MICHAEL LAWRENCE</a>
+                    </div><!-- close navbar-header -->
+                    <!-- Menu Items, don't allow to work on Login Page!! -->
+                    <div class="collapse navbar-collapse" id="mainNavBar">
+                        <ul class="nav navbar-nav">
+
+                            <li><a href="#">Customers</a></li>
+                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Products</a></li>
+
+                            <!-- DropDown Menu -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Customers</a></li>
+                                    <li><a href="#">Orders</a></li>
+                                    <li><a href="#">Products</a></li>
+                                </ul><!-- close dropdown-menu -->
+                            </li><!-- close dropdown -->
+                        </ul><!-- close navbar-nav -->
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- link the Modal to the Login class using: "#Login" -->
+                            <li class="active"><a href="#Login" data-toggle="modal">Login</a></li>
+                        </ul><!-- close navbar-right -->
+                    </div><!-- close navbar-collapse -->
+                </div><!-- close container topnav -->
+            </nav><!-- close navbar-inverse -->
+            <!-- Banner header section -->
+            <div class="intro-banner">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="intro-inner">
+
+                                <!-- My Name in white font colour. Had to override the BootStrap JavaScript using an inline style. ------------------------- -->
+                                <style>
+                                    .MyName {
+                                        color: white;
+                                    }
+                                </style>
+
+                                <center>
+                                    <div class="MyName">
+                                        <h1>Michael Lawrence BSc (HONS)</h1>
+                                        <h3>BootStrap for Programmers</h3>
+                                        <h3>Please LOGIN to use.</h3>
+
+                                        <p>A Customer's Product Ordering system.</p>
+
+                                    </div>
+                                    <!-- ------------------------------------------------------ -->
+                                    <hr class="intro-divider" /> <!-- white bar. -->
+                                    <ul class="list-inline intro-social-buttons">
+
+                                        <li>
+                                            <a href="#" class="btn btn-danger btn-lg">
+                                                <i class="fa fa-user fa-fw"></i>
+                                                <span class="button-title">Customers</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="btn btn-warning btn-lg">
+                                                <i class="fa fa-mobile fa-fw"></i>
+                                                <span class="button-title">Orders</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="btn btn-success btn-lg">
+                                                <i class="fa fa-gift fa-fw"></i>
+                                                <span class="button-title">Products</span>
+                                            </a>
+                                        </li>
+                                    </ul><!-- close list-inline -->
+
+                                </center>
+                            </div><!-- close intro-inner -->
+                        </div><!-- close col-lg-12 -->
+
+                    </div><!-- close row -->
+                </div><!-- close container -->
+            </div><!-- close intro-banner -->
+            <!-- Content row 2 -->
+            <div class="content-section-b">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6">
+                            <div class="clearfix"></div><!-- puts a div between. -->
+
+                            <u><h3 class="section-heading">Technology Used</h3></u>
+                            <p class="lead">
+                                I developed this great App using C#, ASP.Net 4.5, HTML5, CSS3, jQuery, JavaScript, BootStrap JavaScript and Microsoft SQL Server.
+                                I am currently looking for a great career asap, so please get in touch soon at: m2lawrence77@outlook.com
+                                <br /> <br />This is how your company Website, Tablet and Mobile App will look. <br /><br />
+                                Please see all my software at: www.github.com/m2lawrence
+                            </p>
+                        </div><!-- close col-lg-5 col-lg-offset-1 -->
+                        <!-- picture of me! -->
+                        <div class="col-lg-5 col-sm-pull-6 col-sm-6">
+                            <img class="img-responsive img-rounded" src="~/Content/images1/mike.jpg" />
+                            
+                        </div><!-- close col-lg-5 -->
+                        <!-- picture of me! -->
+
+                    </div><!-- close row -->
+                </div><!-- close container -->
+            </div><!-- close content-section-b -->
+            <!-- footer -->
+            <div class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container">
+                    <!-- style the text to look great with BootStrapJS using: class="navbar-text" -->
+                    <p class="navbar-text pull-left">Powered by Microsoft, and built by me. <span class="glyphicon glyphicon-th-large"></span> </p>
+                    <!-- button with my GitHub link in it and opens in new window... target=blank. -->
+                    <i><a href="http://github.com/m2lawrence?tab=repositories" target="blank" class="navbar-btn btn-text btn-info btn-sm pull-right">GitHub</a></i>
+                </div>
+            </div><!-- close footer -->
+        </div><!-- close page div -->
+
+<!-- Modal -->
+<div class="modal fade" id="Login" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Please Login</h4>
+                    </div>
+
+<div class="modal-body">
+<div class="form-group"><!-- open BootStrap form -->
+<div class="container"><!-- open container -->
+<div class="row"><!-- open row -->
+<div class="col-md-6"><!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+<p>Username: m & Password: m.</p>
+</div><!-- close column -->
+</div><!-- close row -->
+</div><!-- close container -->
+
+<!-- build a columns 3 wide of 12 BootStrap JavaScript columns available per page. -->
+<div class="container"><!-- open container -->
+    <div class="form-group">
+        <div class="row"><!-- open row -->
+
+            <div class="col-md-3 "> <!-- Open column, middle sized, and x3 of them. -->
+                <label for="lblUsername">Username:</label>
+                <br /><!-- line break -->
+                <input type="text" class="form-control" id="txtUsername" contextmenu="m" ForeColor="Maroon">
+                <br /><!-- line break -->
+            </div><!-- close column -->
+
+            <div class="col-md-3 ">
+                <!-- Open column, middle sized, and x3 of them. -->
+                <label for="lblPassword">Password:</label>
+                <br /><!-- line break -->
+                <input type="text" class="form-control" id="txtPassword" Font-Bold="False" TextMode="Password" ForeColor="Maroon">
+                <br /><!-- line break -->
+            </div><!-- close column -->
+            </div><!-- close row -->
+            </div><!-- close container -->
+            </div> <!-- Close modal-body -->
+
+                    <div class="modal-footer"><!-- open modal footer -->
+      
+                    <button type="button" ID="Button1" onclick="location.href='@Url.Action("Index")'" class="btn btn-primary btn-sm" OnClick="butOK_Click">Submit</button>
+                    <br />
+                    <label for="lblError" ForeColor="Red"></label>
+                    </div> <!-- Close modal-footer -->
+
+                </div> <!-- Close modal-content -->
+            </div> <!-- Close modal-dialog -->
+        </div> <!-- Close modal fade -->
+
+    </form><!-- close form -->
+</body>
+</html>			
